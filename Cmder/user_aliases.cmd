@@ -6,12 +6,14 @@
 ;= Add aliases below here
 e.=explorer .
 gl=git log --oneline --all --graph --decorate  $*
-rem ls=ls --show-control-chars -F --color $*
+l=ls --show-control-chars -CFGNhp --color --ignore={"NTUSER.DAT*","ntuser.dat*"} $*
+;= rem ls=ls --show-control-chars -F --color $*
 pwd=cd
 clear=cls
 unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
+pwsh=%SystemRoot%/System32/WindowsPowerShell/v1.0/powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression '. ''%CMDER_ROOT%/vendor/profile.ps1'''"
 ls=ls -AFhl --color --group-directories-first $*
 gc=git clone --recurse-submodules -j%NUMBER_OF_PROCESSORS% --shallow-submodules --progress $*
 gs=git status
