@@ -1,0 +1,7 @@
+Columns=115
+Rows=32
+ThemeFile=gruvbox
+Transparency=low
+CursorType=line
+OpaqueWhenFocused=yes
+FontSmoothing=default
